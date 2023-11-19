@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #ddd;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.main-line{
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 5px 10px 10px 5px;
+    position: relative;
+    width: 450px;
+    height: 100px;
+    box-shadow: 0 4px 0 rgb(220, 208, 208);
+    transition: all 0.5s linear;
+}
+
+.title{
+    font-size: 1.25rem;
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.teach,.date,.price{
+    color: #909191;
+}
+
+.date{
+    font-weight: bold;
+}
+
+.price{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
+.arrow {
+    display: inline-block;
+    height: 100%;
+    width: 36px;
+    background-color: #eee;
+    color: #ddd;
+    line-height: 100px;
+    border-radius: 0 10px 10px 0;
+    text-align: center;
+    margin-left: 15px;
+    text-shadow: -1px 0 0 #ddd;
+    box-shadow: 0 4px 0 rgb(220, 208, 208);
+    transition: all 0.3s linear;
+  }
+
+.main-line.blue:hover .arrow,.main-line.red:hover .arrow{
+    background-color: #edebeb;
+    color: #c6c3c3;
+}
+
+.main-line.blue:before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    display: block;
+    background-color: blue;
+    width: 6px;
+    top:0;
+    left: 0;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.3s linear;
+}
+
+.main-line.blue:hover:before{
+    background-color: rgba(44, 27, 193, 0.584);
+}
+
+.main-line.red:before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    background-color: red;
+    width: 6px;
+    top:0;
+    left: 0;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.3s linear;
+}
+
+.main-line.red:hover:before{
+    background-color: rgba(202, 68, 68, 0.584);
+}
+
+.main-line.red:active{
+    transform: scale(0.9);
+}
+
+.main-line.blue:active{
+    transform: scale(0.9);
+}
